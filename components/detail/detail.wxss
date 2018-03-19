@@ -1,0 +1,133 @@
+.container{
+  background-color: rgb(237,236,232);
+}
+.inner{
+  background-color: #fff;
+  width:100%;
+}
+/* 轮播图 */
+.home-swiper{
+  width:100%;
+  height:350rpx;
+  margin-bottom:15rpx;
+}
+.slide-image{
+  width:100%;
+  height:350rpx;
+}
+.title{
+  width:100%;
+  font-size:30rpx;
+  color:#333;
+  margin-bottom:15rpx;
+}
+.price{
+  width:100%;
+  font-size:40rpx;
+  color:#f00;
+}
+/* 运费 */
+.freight{
+  color:#333;
+  font-size:26rpx;
+  width:100%;
+}
+.mar-r{
+  margin-right:30rpx;
+}
+/* 详情页分割线 */
+.detail-line{
+  margin-top:40rpx;
+  width:100%;
+  height:60rpx;
+  background-color:#999;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size:24rpx;
+  color:#333;
+}
+/* 产品详情 */
+.detail-content{
+  background-color:#fff;
+  width:100%;
+}
+.detail-content-inner{
+  width:100%;
+}
+.detail-content-top-size{
+  font-size:26rpx;
+  color:#333;
+  padding:10rpx 0rpx;
+}
+/* 具体信息参数 */
+.detail-content-top{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom:1rpx solid #999;
+  border-top:1rpx solid #999;
+}
+.detail-content-top-inner{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex:1;
+  border-bottom:1rpx solid transparent;
+  padding:10rpx 0rpx;
+  font-size:30rpx;
+}
+.detail-content-bottom-inner{
+  padding-top:20rpx;
+}
+/* 概述 */
+.summary{
+  display:flex;
+  flex-direction: column;
+}
+.summary-top{
+  display:flex;
+  width:100%;
+  justify-content:space-around;
+}
+.summary-inner{
+  display:flex;
+  flex-direction: column;
+}
+/* 实物外观 */
+.commodity{
+  font-size:28rpx;
+  margin-bottom:10rpx;
+}
+/* 评分 */
+.mark-wrap{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  padding:10rpx;
+  border:2rpx solid green;
+}
+.mark-inner{
+  width:100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  background-color: green;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+/* 评价 */
+.evaluate{
+  margin:20rpx 0rpx;
+  font-size:30rpx;
+  color:#333;
+}
+/* 详情图 */
+.detail-content-img-wrap{
+  width:100%;
+  padding:0rpx 20rpx 20rpx 20rpx;
+}
+.detail-content-img{
+  width:670rpx;
+  margin-top:20rpx;
+}

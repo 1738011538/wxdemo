@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container">
+<!-- 轮播图 -->
+  <swiper class="home-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="red">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="imgUrls">
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </swiper>
+  <!-- 头部快速导航 -->
+  <view class="top-list">
+    <block wx:for="{{topList}}" wx:key="topList">
+      <view class="top-list-inner" bindtap="goToTel" data-idx="{{index}}">
+        <image src="{{item.url}}" class="top-list-image"/>
+        <text class="top-list-title">{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 每日优惠 -->
+  <view class="daily-discount">
+    <view class="daily-discount-title">
+      <image class="daily-discount-title-image" src="../../image/tejia.jpg"/>
+      <text>每日优惠 ( {{newWeek}} )</text>
+    </view>
+    <!-- 每日优惠信息 -->
+    <view>
+      <image class="daily-discount-image" src="{{discountImageSrc}}"/>
+      <text>原价</text>
+      <text class="original-price">￥{{originalPrice}}</text>
+      <text>今日特价</text>
+      <text class="present-price">￥{{presentPrice}}</text>
+    </view>
+  </view>
+  <!-- 本店小吃 -->
+  <view class="all">
+    <!-- 标题 -->
+    <view class="all-title">
+      <image class="daily-discount-title-image" src="../../image/logo.jpg"/>
+      <text>本店小吃</text>
+    </view>
+    <!-- 内容 -->
+    <view class="all-list" style="background:url('../../image/bgc.jpg') no-repeat; background-size:cover;">
+      <view class="opc">
+        <view class="left">
+        <block wx:for="{{allListContent}}" wx:key="allListContent-left" > 
+            <view data-num='{{index}}' style="{{index == 5 ? 'border-right:none' : ''}}" class="left-padding {{index == num ? 'left-title' : ''}}" bindtap = "allBindTap">{{ item.title }}</view>
+        </block>
+      </view>
+      <scroll-view class="right" scroll-y="{{true}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{allListContent}}" wx:key="allListContent-right" wx:for-item="conItem" wx:for-index="indexOne">
+          <view class="right-content" wx:if="{{indexOne == num}}" >
+            <view bindtap="goToCom" class="right-content-box" wx:for="{{conItem.content}}" wx:key="conItem-content" wx:for-index="indexTwo" data-idx-one="{{indexOne}}" data-idx-two="{{indexTwo}}">
+              <image style="width:250rpx; height:160rpx; margin-bottom:10rpx;" src="{{item.imgSrc}}"/>
+              <text class="img-alt">{{item.alt}}</text>
+            </view>
+          </view> 
+       </block>
+        <text class="all-bottom">已经到底了，更多美味敬请期待————</text>
+      </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,78 @@
+<view class="container">
+  <view class="inner">
+    <!-- 轮播图 -->
+    <swiper class="home-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="red">
+      <swiper-item wx:for="{{imgUrls}}" wx:key="imgUrls">
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </swiper>
+  <!-- 产品名称 -->
+    <view class="title">{{detailTitle}}</view>
+  <!-- 产品价格 -->
+    <view class="price">￥{{detailPrice}}</view>
+  <!-- 运费以及库存 -->
+    <view class="freight">
+      <text>运费 </text>
+      <text class="mar-r" style="color:red;">{{detailFreight}}</text>
+      <text>库存 </text>
+      <text style="color:red;">{{detailStock}}</text>
+    </view>
+  </view>
+<!-- 这是详情分割线 -->
+  <view class="detail-line">
+    <view>
+      <text>————</text>
+      <text> 详情 </text>
+      <text>————</text>
+    </view>
+  </view>
+  <!-- 产品详情 -->
+  <view class="detail-content">
+    <text class="detail-content-top-size">产品详情</text>
+    <view class="detail-content-inner">
+      <view class="detail-content-top">
+        <block wx:for="{{detailContentTitle}}" wx:key="detailContentTitle">
+          <view data-num="{{index}}" style="{{index == num ? 'border-bottom:1rpx solid #f00;' : ''}}" class="detail-content-top-inner" bindtap='detailContentTopTap'><text>{{item}}</text></view>
+        </block>
+      </view>
+      <!-- 具体展示 -->
+      <view class="detail-content-bottom">
+        <!-- 商品详情 -->
+        <view class="detail-content-bottom-inner">
+          <view class="summary" wx:if="{{num == 0}}">
+          <!-- 概述 -->
+            <view class="summary-top">
+              <block wx:for="{{detailContentList}}" wx:key="detailContentList">
+                <view class="summary-inner">
+                  <view class="commodity">{{item.title}}</view>
+                  <view class="mark-wrap">
+                    <view class="mark-inner">{{item.mark}}</view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          <!-- 评价 -->
+            <view class="evaluate">
+              <text style="margin-right:30rpx;">评价 </text>
+              <text style="color:red;"> {{evaluate}}</text>
+            </view>
+          <!-- 介绍图 -->
+            <view>
+              <view class="detail-content-img-wrap">
+                <block wx:for="{{detailContentImg}}" wx:key="detailContentImg">
+                  <image src="{{item}}" class="detail-content-img"></image>
+                </block>
+              </view>
+            </view>
+          </view>
+          <!-- 参数 -->
+          <view wx:else>
+            <block wx:for="{{detailParameter}}" wx:key="detailParameter">
+              <view>{{item}}</view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

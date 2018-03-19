@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/activity/activity",
+    "pages/users/users",
+    "pages/shopping/shopping",
+    "components/detail/detail",
+    "components/payment/payment"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#56abe4",
+    "backgroundColor": "#fff",
+    "borderStyle": "#000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/homepage.png",
+        "selectedIconPath": "image/homepage_fill.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "image/activity.png",
+        "selectedIconPath": "image/activity_fill.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "点餐",
+        "iconPath": "image/publish goods.png",
+        "selectedIconPath": "image/publish goods_fill.png"
+      },
+      {
+        "pagePath": "pages/users/users",
+        "text": "个人中心",
+        "iconPath": "image/people.png",
+        "selectedIconPath": "image/people_fill.png"
+      }
+    ]
+  }
+}

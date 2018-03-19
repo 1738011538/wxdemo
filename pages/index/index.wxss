@@ -1,0 +1,151 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+/* 首页轮播图 */
+.home-swiper{
+  width:100%;
+  height:350rpx;
+  margin-bottom:50rpx;
+}
+.slide-image{
+  width:100%;
+  height:350rpx;
+}
+/* 首页导航 */
+.top-list{
+  width:710rpx;
+  margin-bottom:50rpx;
+  display:flex;
+  justify-content: space-around;
+}
+.top-list-inner{
+  width:140rpx;
+  height:140rpx;
+  border-radius:50%;
+  background-color: #f00;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top-list-image{
+  width:80rpx;
+  height:80rpx;
+  margin-bottom:5rpx;
+}
+.top-list-title{
+  font-size:24rpx;
+  color:#fff;
+}
+/* 每日优惠 */
+.daily-discount{
+  width:710rpx;
+  margin-bottom:50rpx;
+}
+.original-price{
+  text-decoration:line-through;
+  padding:0rpx 30rpx;
+}
+.present-price{
+  padding-left:30rpx;
+  color:red;
+}
+.daily-discount-title{
+  width:100%;
+  font-weight: bold;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+.daily-discount-title-image{
+  width:50rpx;
+  height:38rpx;
+  margin-right:20rpx;
+  border-radius: 20rpx;
+}
+.daily-discount-image{
+  width:100%;
+  height:350rpx;
+}
+/* 本店小吃 */
+.all{
+  width:710rpx;
+}
+.all-title{
+  font-weight: bold;
+  padding-bottom:30rpx;
+}
+.opc{
+  background-color: rgba(255,255,255,.5);
+}
+/* 分类 */
+.all-list{
+  width:708rpx;
+  
+  display:flex;
+  flex-direction:column;
+  border:1rpx solid #333;
+}
+.left{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.left-padding{
+  padding:10rpx 20rpx;
+  border-bottom:1rpx solid #333; 
+  border-right:1rpx solid #333;
+  background-color: pink;
+  opacity:.6;
+  flex:1;
+}
+.left-title{
+  border-bottom:0rpx solid #333;
+  color:#fff;
+  background-color: #f00;
+  font-weight: bold;
+}
+.right{
+  height:464rpx;
+}
+.right-content{
+  padding:20rpx;
+  display:flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size:26rpx;
+}
+.right-content-box{
+  display:flex;
+  flex-direction:column;
+  margin-bottom: 20rpx;
+}
+.img-alt{
+  text-align: center;
+}
+.all-bottom{
+  display:block;
+  font-size: 30rpx;
+  color:#666;
+  text-align: center;
+}
